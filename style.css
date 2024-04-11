@@ -1,0 +1,373 @@
+@font-face {
+    font-family: Channa;
+    src: url(Fonts/chaney-ultraextended-webfont.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    height: 100vh;
+}
+.loading{
+    background-color: rgba(231, 162, 32, 0.936);
+    width: 100%;
+    min-height: 100vh;
+    z-index: 99;
+    position: absolute;
+    animation-name: pulse;
+    animation-duration: 3s;
+}
+.zoom{
+    position: absolute;
+    font-size: 12vw;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-7deg);
+    -webkit-text-stroke: 0.09vh;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #ffffff96;
+    outline: none;
+    font-family: Channa;
+}
+.scramble{
+    position: absolute;
+    font-size: 3.7vw;
+    left: 50%;
+    outline: none;
+    top: 53%;
+    font-family: Channa;
+    -webkit-text-fill-color: #fff;
+    transform: translate(-50%, -50%) rotate(-7deg);
+}
+.line{
+    position: absolute;
+    height: 0.7vw;
+    width: 50vw;
+    background-color: #fff;
+    top: 67%;
+    left: 52%;
+    transform: translate(-50%, -50%) rotate(-7deg);
+    overflow: hidden;
+    border-radius: 4px;
+    outline: 0;
+    border: none;
+}
+.line::after{
+    content: "";
+    position: absolute;
+    height: 0.7vw;
+    width: 100%;
+    background-color: #fff;
+    animation-name: load;
+    animation-duration: 3s;
+}
+
+@keyframes load {
+    0%{
+        width: 0%;
+        background-color: rgba(146, 72, 216, 0.813);
+    }
+    25%{
+        width: 25%;
+        background-color: rgba(207, 207, 55, 0.813);
+    }
+    50%{
+        width: 50%;
+        background-color: rgba(74, 214, 74, 0.785);
+    }
+    75%{
+        width: 75%;
+        background-color: rgba(223, 70, 70, 0.626);
+    }
+    100%{
+        width: 100%;
+        background-color: rgba(231, 162, 32, 0.936);
+    }
+}
+@keyframes pulse {
+    0%{
+        
+        background-color: rgba(146, 72, 216, 0.813);
+    }
+    25%{
+        
+        background-color: rgba(207, 207, 55, 0.813);
+    }
+    50%{
+        
+        background-color: rgba(74, 214, 74, 0.785);
+    }
+    75%{
+       
+        background-color: rgba(223, 70, 70, 0.626);
+    }
+    100%{
+        
+        background-color: rgba(231, 162, 32, 0.936);
+    }
+}
+
+
+
+
+.svgwaala{
+    min-height: 100vh;
+    /* background-color: aqua; */
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    background-image: url(Images/back1.jpg);
+    background-position: bottom;
+    background-size: cover;
+    overflow: hidden;
+    z-index: 9;
+}
+.dotted{
+    position: absolute;
+    background-image: url(Images/back.png);
+    background-position: center;
+    /* background-attachment: fixed; */
+    width: 130%;
+    height: 130%;
+    animation: jali 2s alternate  infinite linear;
+    /* transition: all ease-in-out; */
+    z-index: -1;
+    
+}
+#donut{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    /* background-attachment: fixed; */
+}
+.container{
+    height: 30vw;
+    width: 30vw;
+    /* background-color: aqua; */
+    position: absolute;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    top: 30%;
+    /* background-color: aqua; */
+    left: 35%;
+    transform: translate(-50%, -50%);
+    /* transition: all ease 0.5s; */
+    scale: 0;
+    opacity: 0;
+    
+    
+}
+.container img{
+    scale: 0.98;
+}
+#donut{
+    animation: donut-up-down 1.5s alternate linear infinite ;
+    position: relative;
+    transition: all ease 0.4s;
+    height: 20vw;
+}
+#kothik-k{
+    height: 7.5vw;
+    top: 15%;
+    position: absolute;
+    animation: letters-k 1.9s alternate linear infinite ;
+    transition: all ease 0.4s;
+    left: 20%;
+}
+#kothik-o{
+    height: 5.5vw;
+    right: 30%;
+    position: absolute;
+    top: 13%;
+    animation: letters-o 1.8s alternate linear infinite ;
+    transition: all ease 0.4s;
+}
+#kothik-t{
+    height: 8vw;
+    right: 20%;
+    position: absolute;
+    animation: letters-t 1.7s alternate linear infinite;
+        top: 32%;
+    transition: all ease 0.4s;
+
+}
+#kothik-h{
+    height: 9vw;
+    right: 26%;
+    position: absolute;
+    bottom: 25%;
+    animation: letters-h 1.8s alternate linear infinite;
+    transition: all ease 0.4s;
+
+}
+#kothik-i{
+    height: 12vw;
+    left: 10%;
+    position: absolute;
+    bottom: 18%;
+    animation: letters-i 1.8s linear alternate infinite;
+    transition: all ease 0.4s;
+
+    
+    
+}
+#kothik-k2{
+    height: 4.2vw;
+    left: 18%;
+    position: absolute;
+    top: 38%;
+    animation: letters-k2 1.8s alternate linear infinite ;
+    transition: all ease 0.4s;
+}
+
+
+@keyframes letters-k2 {
+    to{
+        top: 38%;
+        scale: 1.1;
+    }
+    from{
+        top: 39%;
+    }
+}
+@keyframes letters-h {
+    to{
+        top: 47%;
+        scale: 1.1;
+    }
+    from{
+        top: 50%;
+    }
+}
+@keyframes letters-o {
+    from{
+        top: 13%;
+        /* scale: 1.15; */
+    }
+    to{
+        top: 18%;
+        
+    }
+}
+@keyframes letters-i {
+    from{
+        top: 40%;
+        /* scale: 1.15; */
+    }
+    to{
+        top: 44%;
+        
+    }
+}
+@keyframes letters-t {
+    from{
+        top: 34%;
+        /* scale: 1.15; */
+    }
+    to{
+        top: 38%;
+        
+    }
+}
+@keyframes letters-k {
+    from{
+        top: 13%;
+        
+    }
+    to{
+        top: 18%;
+        
+    }
+}
+
+
+
+@keyframes donut-up-down {
+    from{
+        top:  50%;
+    }
+    to{
+        top: 40%;
+    }
+}
+
+
+@keyframes jali {
+    from{
+        top: -7%;
+        left: -7%;
+    }
+    to{
+        top: 0%;
+        left: 0%;
+    }
+    
+    
+}
+.container img{
+    height: 300px;
+}
+
+
+
+.explore{
+    position: absolute;
+    /* height: 4vw; */
+    /* background-color: aqua; */
+    top: 78%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.5vw;
+    border: 1px solid white;
+    padding: 0.5vw 1vw;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0.5vw 0.5vw 0.3vw rgba(241, 162, 176, 0.797);
+    cursor: pointer;
+    transform: all ease 1s;
+}
+.explore:hover{
+    
+    border: 2px solid pink;
+    scale: 0.98;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 600px) {
+    .line{
+       
+        top: 60%;
+        left: 52%;
+        
+    }
+}
